@@ -121,7 +121,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SteamMan_jump_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445ad0fd32d39cf42908c87b9b50c133
+      internalID: 1961794844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SteamMan_jump_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 0
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf7cf4a0c28f894dbd4a8bec2e38bbf
+      internalID: -157213022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SteamMan_jump_2
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a524a0f6d636355479b5aac029328594
+      internalID: 594434054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SteamMan_jump_3
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 4
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d5d4ac07645992499630b450e220d8c
+      internalID: 658062474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SteamMan_jump_4
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 2
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb02026693fa0cd4b854dd829878fa6c
+      internalID: 3042760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SteamMan_jump_5
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 0
+        width: 33
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b78db7aa8ba1b10459734b1d3c95819e
+      internalID: 625044533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +258,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SteamMan_jump_0: 1961794844
+      SteamMan_jump_1: -157213022
+      SteamMan_jump_2: 594434054
+      SteamMan_jump_3: 658062474
+      SteamMan_jump_4: 3042760
+      SteamMan_jump_5: 625044533
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

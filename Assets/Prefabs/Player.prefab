@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &505800811968113555
+--- !u!1 &2044563066768360653
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2996720842668053347}
+  - component: {fileID: 7003856886901232443}
   m_Layer: 10
-  m_Name: Ground Point
+  m_Name: groundPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2996720842668053347
+--- !u!4 &7003856886901232443
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 505800811968113555}
+  m_GameObject: {fileID: 2044563066768360653}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.059, y: -0.607, z: 0}
+  m_LocalPosition: {x: 0, y: -0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46,9 +46,7 @@ GameObject:
   - component: {fileID: 4740262389492471338}
   - component: {fileID: 3183961027301181600}
   - component: {fileID: 680316364}
-  - component: {fileID: 49509562571242050}
   - component: {fileID: 943199776}
-  - component: {fileID: 1981183325955149746}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -65,11 +63,11 @@ Transform:
   m_GameObject: {fileID: 5615987377176284517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.335, y: 2.754, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2996720842668053347}
+  - {fileID: 7003856886901232443}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &5615987377176284443
@@ -204,8 +202,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06542897, y: -0.095954835}
-  m_Size: {x: 0.39808893, y: 0.94661725}
+  m_Offset: {x: -0.27898288, y: -0.13600206}
+  m_Size: {x: 0.4415288, y: 1.158695}
   m_Direction: 0
 --- !u!114 &3183961027301181600
 MonoBehaviour:
@@ -267,7 +265,7 @@ MonoBehaviour:
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1981183325955149746}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: Pause
         m_Mode: 0
@@ -285,6 +283,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 58fbaf7c-c702-40e7-9e1a-4158cea369da
     m_ActionName: Player/PowerUp[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 03382011-0c85-490d-b4f9-16b110e59566
+    m_ActionName: Player/Boost[/Keyboard/f]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -302,58 +304,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c897dcb27eafa714eb68a5cdc08126cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 5
-  jumpSpeed: 10
+  moveSpeed: 5
+  jumpForce: 9
   climbSpeed: 5
   boostTimer: 0
   cooldownBoostTime: 20
   deathKick: {x: 0, y: 10}
-  attackCooldown: 1.5
---- !u!61 &49509562571242050
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5615987377176284517}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
+  deathSFX: {fileID: 8300000, guid: 8a2fe8ad69d20d24589f5036e63168b0, type: 3}
+  whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.063534975, y: -0.55326414}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.7142857, y: 1.7142857}
-    newSize: {x: 0.26, y: 0.19}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.24561739, y: 0.080555916}
-  m_EdgeRadius: 0
+    m_Bits: 256
+  groundPoint: {fileID: 7003856886901232443}
 --- !u!81 &943199776
 AudioListener:
   m_ObjectHideFlags: 0
@@ -362,16 +323,3 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5615987377176284517}
   m_Enabled: 1
---- !u!114 &1981183325955149746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5615987377176284517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cc7c3434c793e8458bb0e11a45ba17f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseScreen: {fileID: 0}

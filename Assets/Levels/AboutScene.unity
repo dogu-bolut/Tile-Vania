@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 195305957}
   - component: {fileID: 195305956}
   m_Layer: 5
-  m_Name: SuccessButton
+  m_Name: MenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -350}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &195305956
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 36097b5693c0714478ffc6273a352644, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9c82b6ad87c042348aacc81b6fadcc87, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 833116942}
   - component: {fileID: 833116941}
   m_Layer: 5
-  m_Name: Success Menu Canvas
+  m_Name: AboutCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 1314677426}
   - component: {fileID: 1314677425}
   m_Layer: 5
-  m_Name: CongratsText
+  m_Name: Explanations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -483,8 +483,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 140}
-  m_SizeDelta: {x: 800, y: 100}
+  m_AnchoredPosition: {x: 0, y: 40}
+  m_SizeDelta: {x: 1200, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1314677425
 MonoBehaviour:
@@ -499,7 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8957694, g: 1, b: 0.6462264, a: 1}
+  m_Color: {r: 1, g: 0.9177933, b: 0.7688679, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -513,13 +513,15 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 50
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Well done, this is the end. '
+  m_Text: "Basic intention of this game is create the vibe of mario saves princess.
+    You cannot damage enemies and water is dangerous for our hero. Double jump is
+    unique qualification can be use everywhere. \n\nI hope you can enjoy.."
 --- !u!222 &1314677426
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -608,7 +610,7 @@ GameObject:
   - component: {fileID: 2036776807}
   - component: {fileID: 2036776806}
   m_Layer: 5
-  m_Name: SuccessText
+  m_Name: MenuText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -712,7 +714,7 @@ PrefabInstance:
     - target: {fileID: 2841772092724008033, guid: fdeb82dc491ba934e9846bff69d26a41,
         type: 3}
       propertyPath: orthographic size
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2983628753149741844, guid: fdeb82dc491ba934e9846bff69d26a41,
         type: 3}

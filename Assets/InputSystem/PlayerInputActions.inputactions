@@ -24,18 +24,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Pause",
+                    "name": "PowerUp",
                     "type": "Button",
-                    "id": "94aeb033-ebd4-4458-82b0-8769694448df",
+                    "id": "58fbaf7c-c702-40e7-9e1a-4158cea369da",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "PowerUp",
+                    "name": "Boost",
                     "type": "Button",
-                    "id": "58fbaf7c-c702-40e7-9e1a-4158cea369da",
+                    "id": "03382011-0c85-490d-b4f9-16b110e59566",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -199,28 +199,6 @@
                 },
                 {
                     "name": "",
-                    "id": "f5d71fbc-1895-4f0f-809d-cf6685d06166",
-                    "path": "<Gamepad>/start",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c47d82d4-6e4c-4876-829c-90a79ed22d89",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "a9803dc9-84fb-4a36-b6d1-eb7895ec9371",
                     "path": "<Keyboard>/f",
                     "interactions": "",
@@ -238,6 +216,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "PowerUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "77f4bd2d-8467-41a1-b8b5-333e2ebbd000",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Boost",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

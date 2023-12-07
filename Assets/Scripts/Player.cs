@@ -1,29 +1,34 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
     // Config
-    [SerializeField] float runSpeed = 5f;
-    [SerializeField] float jumpSpeed = 5f;
+    [SerializeField] float moveSpeed = 5f;
+    [SerializeField] float jumpForce = 5f;
     [SerializeField] float climbSpeed = 5f;
     [SerializeField] float boostTimer = 0f;
     [SerializeField] float cooldownBoostTime = 20f;
     [SerializeField] Vector2 deathKick = new Vector2(0f, 5f);
-    float attackStart = 0f;
-    [SerializeField] float attackCooldown = 1.5f;
+    [SerializeField] AudioClip deathSFX;
+    private float inputX;
+    private float inputY;
+    bool canDoubleJump;
+    [Header("Check Ground")]
+    public LayerMask whatIsGround;
+    bool isGrounded;
+    public Transform groundPoint;
 
     // State
     bool isAlive = true;
-    bool isAttacking = false;
     bool isBoosted = false;
 
     // Cached component refrences
     Rigidbody2D myRigidBody;
     Animator myAnimator;
     CapsuleCollider2D myBodyCollider;
-    BoxCollider2D myFeet;
     float gravityScaleAtStart;
 
     void Start()
@@ -31,28 +36,32 @@ public class Player : MonoBehaviour
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         myBodyCollider = GetComponent<CapsuleCollider2D>();
-        myFeet = GetComponent<BoxCollider2D>();
         gravityScaleAtStart = myRigidBody.gravityScale;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!isAlive) { return; }
-
-        Run();
-        Jump();
+        if (!isAlive)
+        {
+            myRigidBody.velocity = new Vector3(0f, myRigidBody.velocity.y);
+            return;
+        }
+        myRigidBody.velocity = new Vector2(inputX * moveSpeed, myRigidBody.velocity.y);
+        isGrounded = Physics2D.OverlapCircle(groundPoint.position, .2f, whatIsGround);
+        myAnimator.SetBool("Running", Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon);
         ClimbLadder();
         FlipSprite();
         Die();
-        Boost();
     }
-    private void Boost()
+    public void Boost(InputAction.CallbackContext context)
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
+        if (!isAlive) { return; }
+        if (context.performed)
             isBoosted = true;
-        }
+    }
+    public void BoostProcess()
+    {
         if (isBoosted)
         {
             boostTimer += Time.deltaTime;
@@ -71,26 +80,22 @@ public class Player : MonoBehaviour
         boostTimer = 0;
     }
 
-    private void Run()
+    public void Move(InputAction.CallbackContext context)
     {
-        float controlThrow = Input.GetAxis("Horizontal");
-        Vector2 playerVelocity = new Vector2(controlThrow * runSpeed, myRigidBody.velocity.y);
-        myRigidBody.velocity = playerVelocity;
-
-        bool playerHasHorizontalSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon;
-        myAnimator.SetBool("Running", playerHasHorizontalSpeed);
+        inputY = context.ReadValue<Vector2>().y;
+        inputX = context.ReadValue<Vector2>().x;
     }
 
     private void ClimbLadder()
     {
-        if (!myFeet.IsTouchingLayers(LayerMask.GetMask("Climbing")))
+        if (!myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
         {
             myAnimator.SetBool("Climbing", false);
             myRigidBody.gravityScale = gravityScaleAtStart;
             return;
         }
 
-        float controlThrow = Input.GetAxis("Vertical");
+        float controlThrow = inputY;
         Vector2 climbVelocity = new Vector2(myRigidBody.velocity.x, controlThrow * climbSpeed);
         myRigidBody.velocity = climbVelocity;
         myRigidBody.gravityScale = 0f;
@@ -99,16 +104,22 @@ public class Player : MonoBehaviour
         myAnimator.SetBool("Climbing", playerHasVerticalSpeed);
     }
 
-    private void Jump()
+    public void Jump(InputAction.CallbackContext context)
     {
-        if (!myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return; }
-
-
-        if (Input.GetButtonDown("Jump"))
+        if (isGrounded && context.performed)
         {
+            myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpForce);
+            canDoubleJump = true;
             myAnimator.SetTrigger("Jump");
-            Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
-            myRigidBody.velocity += jumpVelocityToAdd;
+        }
+        else
+        {
+            if (canDoubleJump && context.performed)
+            {
+                myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpForce);
+                canDoubleJump = false;
+                myAnimator.SetTrigger("Jump");
+            }
         }
     }
 
@@ -118,6 +129,7 @@ public class Player : MonoBehaviour
         {
             isAlive = false;
             myAnimator.SetTrigger("Death");
+            AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position);
             GetComponent<Rigidbody2D>().velocity = deathKick;
             FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }

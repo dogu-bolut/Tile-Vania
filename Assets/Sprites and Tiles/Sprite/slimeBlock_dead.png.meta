@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0501c32d95d95a042bde5a9e579cf67b
+guid: dee535477b0c5e146b55bfc8031fbbb3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 28
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,133 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: SteamMan_run_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 33
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c4402bc7e16b2e4d936c3381b281240
-      internalID: 705290412
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamMan_run_1
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 0
-        width: 33
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff3dd99e180803b459f9e185f7d055d0
-      internalID: -1892072788
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamMan_run_2
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 33
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 941740845ac22344d99f6b700cf48cb8
-      internalID: 548205097
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamMan_run_3
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 33
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e8c0e60fd2107bc4abe1b4302d8566de
-      internalID: 1805874291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamMan_run_4
-      rect:
-        serializedVersion: 2
-        x: 193
-        y: 0
-        width: 33
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fab9bbd1871f74c43acfed5e601e000c
-      internalID: 1786241354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamMan_run_5
-      rect:
-        serializedVersion: 2
-        x: 238
-        y: 0
-        width: 33
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86a38e57faf720041995c2f94a5133b9
-      internalID: -359623930
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -258,13 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      SteamMan_run_0: 705290412
-      SteamMan_run_1: -1892072788
-      SteamMan_run_2: 548205097
-      SteamMan_run_3: 1805874291
-      SteamMan_run_4: 1786241354
-      SteamMan_run_5: -359623930
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -44807,6 +44807,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1169056104891136552, guid: 1d3d96d9e174c9f43b86932317c75ca8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5615987377546251868}
+    - target: {fileID: 1169056104891136552, guid: 1d3d96d9e174c9f43b86932317c75ca8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339307659721269550, guid: 1d3d96d9e174c9f43b86932317c75ca8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5615987377546251868}
+    - target: {fileID: 1339307659721269550, guid: 1d3d96d9e174c9f43b86932317c75ca8,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
     - target: {fileID: 3907691204446500994, guid: 1d3d96d9e174c9f43b86932317c75ca8,
         type: 3}
       propertyPath: m_Name
@@ -45088,6 +45108,18 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 5615987377546251866}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5615987377546251868 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1981183325955149746, guid: e751a5cb7c6d93e40bc09f7b0cfc6ad9,
+    type: 3}
+  m_PrefabInstance: {fileID: 5615987377546251866}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc7c3434c793e8458bb0e11a45ba17f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7489315894926565139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45202,7 +45234,7 @@ PrefabInstance:
     - target: {fileID: 2841772092724008033, guid: fdeb82dc491ba934e9846bff69d26a41,
         type: 3}
       propertyPath: orthographic size
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2983628753149741844, guid: fdeb82dc491ba934e9846bff69d26a41,
         type: 3}
@@ -45267,12 +45299,12 @@ PrefabInstance:
     - target: {fileID: 4428907306021070718, guid: fdeb82dc491ba934e9846bff69d26a41,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.8835449
+      value: -1.3549805
       objectReference: {fileID: 0}
     - target: {fileID: 4428907306021070718, guid: fdeb82dc491ba934e9846bff69d26a41,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.0057964
+      value: -6.006032
       objectReference: {fileID: 0}
     - target: {fileID: 4862485624717249851, guid: fdeb82dc491ba934e9846bff69d26a41,
         type: 3}
