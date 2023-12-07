@@ -56,7 +56,6 @@ public class GameSession : MonoBehaviour
         }
         ScoreText.text = score.ToString();
     }
-
     public void AddToScore(int pointsToAdd)
     {
         score += pointsToAdd;

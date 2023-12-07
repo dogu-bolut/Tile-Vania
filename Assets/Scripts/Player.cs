@@ -45,7 +45,6 @@ public class Player : MonoBehaviour
         ClimbLadder();
         FlipSprite();
         Die();
-        Attack();
         Boost();
     }
     private void Boost()
@@ -110,19 +109,6 @@ public class Player : MonoBehaviour
             myAnimator.SetTrigger("Jump");
             Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
             myRigidBody.velocity += jumpVelocityToAdd;
-        }
-    }
-
-    private void Attack()
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            if(Time.time > attackStart + attackCooldown)
-            {
-                attackStart = Time.time;
-                isAttacking = true;
-                myAnimator.SetTrigger("Attack");
-            }
         }
     }
 
