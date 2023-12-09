@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ee38c7afa11271e4ba8eeb7abb2c01c3
+guid: 26a277943e536ab4f957581e604106c4
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -60,7 +60,7 @@ TextureImporter:
       213: -6137385103307392929
     second: Player_Death_Outlined_26
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -77,9 +77,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -111,10 +114,15 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -126,6 +134,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -138,6 +147,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -150,6 +160,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -564,9 +588,28 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Player_Death_Outlined_0: 2401601091639545407
+      Player_Death_Outlined_1: 8499428216657253602
+      Player_Death_Outlined_11: 570238056906678886
+      Player_Death_Outlined_12: 6570694478308023008
+      Player_Death_Outlined_14: -7343642166919398486
+      Player_Death_Outlined_15: -1231400582408520684
+      Player_Death_Outlined_17: -5838936904654927377
+      Player_Death_Outlined_18: -1431343662836852441
+      Player_Death_Outlined_21: 5049181898150180210
+      Player_Death_Outlined_22: -4135347365441004211
+      Player_Death_Outlined_23: -2322611325700152085
+      Player_Death_Outlined_24: -4809887031382477426
+      Player_Death_Outlined_25: 97881712650791749
+      Player_Death_Outlined_26: -6137385103307392929
+      Player_Death_Outlined_3: -4645502221508253819
+      Player_Death_Outlined_4: 4585689069982351430
+      Player_Death_Outlined_6: -4879729509896054303
+      Player_Death_Outlined_7: -1630917683966395462
+      Player_Death_Outlined_9: -3688279487635199266
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
