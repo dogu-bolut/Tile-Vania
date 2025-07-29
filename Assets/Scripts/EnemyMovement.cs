@@ -18,11 +18,11 @@ public class EnemyMovement : MonoBehaviour
     {
         if(IsFacingRight())
         {
-            enemyRigidbody.velocity = new Vector2(moveSpeed, 0f);
+            enemyRigidbody.linearVelocity = new Vector2(moveSpeed, 0f);
         }
         else
         {
-            enemyRigidbody.velocity = new Vector2(-moveSpeed, 0f);
+            enemyRigidbody.linearVelocity = new Vector2(-moveSpeed, 0f);
         }
     }
     bool IsFacingRight()
@@ -31,6 +31,6 @@ public class EnemyMovement : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        transform.localScale = new Vector2(-(Mathf.Sign(enemyRigidbody.velocity.x)) * Xfactor, scaleY);
+        transform.localScale = new Vector2(-(Mathf.Sign(enemyRigidbody.linearVelocity.x)) * Xfactor, scaleY);
     }
 }

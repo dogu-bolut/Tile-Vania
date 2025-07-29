@@ -52,5 +52,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Tile Vania.sln"
+    "dotnet.defaultSolution": "Tile-Vania.sln"
 }

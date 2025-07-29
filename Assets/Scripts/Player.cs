@@ -44,12 +44,12 @@ public class Player : MonoBehaviour
     {
         if (!isAlive)
         {
-            myRigidBody.velocity = new Vector3(0f, myRigidBody.velocity.y);
+            myRigidBody.linearVelocity = new Vector3(0f, myRigidBody.linearVelocity.y);
             return;
         }
-        myRigidBody.velocity = new Vector2(inputX * moveSpeed, myRigidBody.velocity.y);
+        myRigidBody.linearVelocity = new Vector2(inputX * moveSpeed, myRigidBody.linearVelocity.y);
         isGrounded = Physics2D.OverlapCircle(groundPoint.position, .2f, whatIsGround);
-        myAnimator.SetBool("Running", Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon);
+        myAnimator.SetBool("Running", Mathf.Abs(myRigidBody.linearVelocity.x) > Mathf.Epsilon);
         ClimbLadder();
         FlipSprite();
         Die();
@@ -96,11 +96,11 @@ public class Player : MonoBehaviour
         }
 
         float controlThrow = inputY;
-        Vector2 climbVelocity = new Vector2(myRigidBody.velocity.x, controlThrow * climbSpeed);
-        myRigidBody.velocity = climbVelocity;
+        Vector2 climbVelocity = new Vector2(myRigidBody.linearVelocity.x, controlThrow * climbSpeed);
+        myRigidBody.linearVelocity = climbVelocity;
         myRigidBody.gravityScale = 0f;
 
-        bool playerHasVerticalSpeed = Mathf.Abs(myRigidBody.velocity.y) > Mathf.Epsilon;
+        bool playerHasVerticalSpeed = Mathf.Abs(myRigidBody.linearVelocity.y) > Mathf.Epsilon;
         myAnimator.SetBool("Climbing", playerHasVerticalSpeed);
     }
 
@@ -108,7 +108,7 @@ public class Player : MonoBehaviour
     {
         if (isGrounded && context.performed)
         {
-            myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpForce);
+            myRigidBody.linearVelocity = new Vector2(myRigidBody.linearVelocity.x, jumpForce);
             canDoubleJump = true;
             myAnimator.SetTrigger("Jump");
         }
@@ -116,7 +116,7 @@ public class Player : MonoBehaviour
         {
             if (canDoubleJump && context.performed)
             {
-                myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpForce);
+                myRigidBody.linearVelocity = new Vector2(myRigidBody.linearVelocity.x, jumpForce);
                 canDoubleJump = false;
                 myAnimator.SetTrigger("Jump");
             }
@@ -130,17 +130,17 @@ public class Player : MonoBehaviour
             isAlive = false;
             myAnimator.SetTrigger("Death");
             AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position);
-            GetComponent<Rigidbody2D>().velocity = deathKick;
+            GetComponent<Rigidbody2D>().linearVelocity = deathKick;
             FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
 
     private void FlipSprite()
     {
-        bool playerHasHorizontalSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon;
+        bool playerHasHorizontalSpeed = Mathf.Abs(myRigidBody.linearVelocity.x) > Mathf.Epsilon;
         if (playerHasHorizontalSpeed)
         {
-            transform.localScale = new Vector2(Mathf.Sign(myRigidBody.velocity.x), 1f);
+            transform.localScale = new Vector2(Mathf.Sign(myRigidBody.linearVelocity.x), 1f);
         }
     }
 
